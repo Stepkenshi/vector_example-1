@@ -20,22 +20,21 @@ vector_t::vector_t(vector_t const & other)
 
 vector_t & vector_t::operator =(vector_t const & other)
 {
-	if (this != other)
- 	{
+           if (this != &other)
+	{
 		if(elements_ != nullptr)
 			delete[]elements_;
 		elements_ = new int [other.capacity_];
 
-
 		for (size_t i = 0; i < other.capacity_; i++)
 		{
-			elememnts_[i] = other.elements_[i];
+			elements_[i] = other.elements_[i];
 		}
 		capacity_ = other.capacity_;
 		size_ = other.size_;
+	}
 		return *this;
 }
-
 bool vector_t::operator ==(vector_t const & other) const
 {
 	if (size_ == other.size_)
