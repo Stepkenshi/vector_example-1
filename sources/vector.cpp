@@ -115,9 +115,9 @@ void vector_t::pop_back()
 				temp_elements[i] = elements_[i];
 			}
 			
-			
+			delete[]elements_;
 
-			elements = temp_elements;
+			elements_ = temp_elements;
 		}
 	}else
 	{
