@@ -109,7 +109,7 @@ void vector_t::pop_back()
 		if (size_ <= ( capacity_ / 4 ))
 		{
 			capacity_ = capacity_ / 2;
-			int  temp_elements = new int [capacity_];
+			int* temp_elements = new int [capacity_];
 			for (size_t i = 0; i < size_; i++)
 			{
 				temp_elements[i] = elements_[i];
